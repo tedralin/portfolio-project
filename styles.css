@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+a:link, a:visited {
+  text-shadow: lightblue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  background-color: #DDD;
+  margin: 10px 20px;
+}
+
+.nav, .nav * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  height: 5rem;
+}
+.nav .nav__logo {
+  width: 25vw;
+  font-weight: bold;
+  font-size: 30px;
+}
+.nav .nav__logo :hover {
+  text-decoration: underline;
+}
+.nav .nav__links {
+  justify-content: flex-end;
+  padding: 20px;
+  width: 75vw;
+}
+.nav .nav__links .nav__links__item {
+  width: 80px;
+  color: gray;
+  text-decoration: none;
+}
+.nav .nav__links .nav__links__item:hover {
+  text-decoration: underline;
+}
+.nav .nav__links .nav__links--button {
+  color: black;
+}
+
+.intro {
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+}
+.intro__button {
+  width: 250px;
+  box-shadow: 1px 1px;
+}
+
+.skills {
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  background-color: white;
+  color: #A3E1DE;
+}
+.skills__title {
+  color: black;
+}
+.skills__list {
+  color: gray;
+}
+.skills__icons {
+  width: 80vw;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.skills__icons__group {
+  display: flex;
+  flex-direction: column;
+}
+.skills__icons__group__img {
+  font-size: 40px;
+}
+
+.projects {
+  background-color: white;
+  padding: 50px;
+}
+.projects__heading {
+  text-align: center;
+  height: auto;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.projects__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5%;
+}
+.projects__container__list {
+  font-family: Helvetica;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 2px inset lightblue;
+}
+.projects__container__list__box {
+  height: 18rem;
+  background-color: #A3E1DE;
+}
+.projects__container__list__skills {
+  color: #A3E1DE;
+  padding: 10px 0;
+  font-size: 12px;
+}
+.projects__container__list__name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.projects__container__list__desc {
+  height: 8rem;
+  color: gray;
+  margin: 10px 0;
+}
+.projects__container__list__preview {
+  display: flex;
+  justify-content: space-around;
+}
+.projects__container__list__preview--nav {
+  color: gray;
+  text-decoration: none;
+  font-size: 12px;
+}
+.projects__container__list__preview--nav:hover {
+  text-decoration: underline;
+}
+
+.about-me {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+.about-me__left {
+  margin: 0px 30px;
+  width: 75vw;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: justify;
+  align-items: flex-start;
+}
+.about-me__left__text {
+  color: gray;
+}
+.about-me__photo {
+  padding: 0 50px;
+  height: 15rem;
+}
+
+.footer {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  background-color: black;
+  color: #A3E1DE;
+}
+.footer__email {
+  font-size: 15px;
+  color: white;
+}
+.footer__right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  border-radius: 5pt;
+  background-color: #A3E1DE;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 800px) {
+  .nav .nav__links {
+    display: none;
+  }
+  .skills__list {
+    display: none;
+  }
+  .projects__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .about-me {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about-me__left {
+    width: auto;
+  }
+  .about-me__photo {
+    height: 15rem;
+    width: 20rem;
+    margin: 10px;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,267 @@
+* {margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-size: 15px;
+    }
+ 
+$font-color-gray: gray;
+$theme-color: #A3E1DE;
+
+a:link, a:visited {
+    text-shadow: lightblue;
+}
+a:hover {
+    text-decoration: underline;
+}
+    
+
+body {
+    background-color: #DDD;
+    margin: 10px 20px;
+}
+ .nav, .nav * {
+     display:flex;
+     justify-content: space-between;
+     align-items: center;
+  }
+ 
+ .nav {
+    // justify-content: space-between;
+    height: 5rem;
+
+    .nav__logo {
+        width: 25vw;
+        font-weight: bold;
+        font-size: 30px;
+        :hover {text-decoration: underline;}
+    }
+    .nav__links {
+        justify-content: flex-end;
+        padding: 20px;
+        width: 75vw;
+        .nav__links__item {
+            width: 80px;
+            color: $font-color-gray;
+            text-decoration: none;
+        }
+        .nav__links__item:hover {
+            text-decoration: underline;
+        }
+
+        .nav__links--button {
+            color: black;
+        }
+    }        
+ }
+
+.intro {
+    height: 12rem;
+    display: flex;
+    flex-direction: column;    
+    padding: 20px 20px;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+
+    &__button {
+        width: 250px;
+        box-shadow: 1px 1px;
+    }        
+}
+
+.skills {
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    background-color: white;
+    color: $theme-color;
+    &__title {
+        color:black;
+    }
+    &__list {
+        color: $font-color-gray;
+    }
+    &__icons {
+        width: 80vw;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-evenly;    
+       
+
+        &__group {
+            display: flex;
+            flex-direction: column;
+
+            &__img {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+
+.projects {
+    background-color: white;
+    padding: 50px; 
+    &__heading {
+        text-align: center;
+        height: auto;
+        margin: 20px;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    &__container {
+        // display:flex;
+        // flex-wrap: wrap;
+        // justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5%;
+        &__list {
+            font-family: Helvetica;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border: 2px inset lightblue;  
+            &__box {
+                height: 18rem;
+                background-color: $theme-color;    
+                // box-shadow: 10px 10px 40px gray;                        
+            }
+            &__skills {
+                color: $theme-color;                
+                padding: 10px 0;
+                font-size: 12px;
+            }
+            &__name {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            &__desc {
+                height: 8rem;
+                color: $font-color-gray;
+                margin: 10px 0;
+            }
+            &__preview {
+                display: flex;
+                justify-content: space-around;
+                &--nav {
+                    color: $font-color-gray;
+                    text-decoration: none;
+                    font-size: 12px;
+                }
+                &--nav:hover {
+                    text-decoration: underline;
+                }
+            }
+            
+        }
+    }
+}
+    
+    
+.about-me {
+    // height: 35rem;
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+    &__left {
+        margin: 0px 30px;
+        width: 75vw;
+        padding: 0px 20px;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: justify;
+        align-items: flex-start;
+    &__text {
+        color: $font-color-gray;
+        }
+    }
+    &__photo {
+        padding: 0 50px;
+        height: 15rem;
+    }
+    
+}
+    
+    
+.footer {
+    display:flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    background-color: black;
+    color:$theme-color;
+    &__email {
+        font-size: 15px;
+        color: white;
+    }
+    &__right {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+    
+.button {
+    // border: 1px solid black;
+    border-radius: 5pt;
+    background-color:$theme-color;
+    padding: 5px;
+    text-decoration: none;    
+    color: black;
+}
+
+@media screen and (max-width: 800px) {
+    .nav {
+        .nav__links {
+            display: none;
+        }        
+     }
+    
+    .skills {
+        &__list {
+            display: none;
+        }
+    }
+    
+    
+    .projects {
+        &__container {
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+        
+        
+    .about-me {
+        display: flex;
+        flex-direction: column-reverse;
+        &__left {
+            width: auto;
+        }
+        &__photo {
+            // display: flex;
+            height: 15rem;
+            width: 20rem;
+            margin: 10px;
+            justify-content: center;
+            // align-items: center;
+        }
+    }
+        
+}
+ 
+
+
+
